@@ -1,6 +1,8 @@
 import axios from 'axios';
 
 const url = "https://api.rootnet.in/covid19-in/stats/";
+const global_url = "https://covid19.mathdro.id/api"
+
 
 export const fetchData = async () => {
     try {
@@ -13,16 +15,21 @@ export const fetchData = async () => {
         return modifiedData;
     }
     catch (error) {
-
     }
 }
 
-// export const fetchDailyData = async () => {
-//     try {
-//         const { data } = await axios.get('${url}/history');
-//         console.log(data);
-//     }
-//     catch (error) {
+export const fetchDailyData = async () => {
 
-//     }
-// }
+    try {
+        const { data } = await axios.get(`${global_url}/daily/`);
+        const modifiedData = data.map((dailyData) => ({
+            confirmed: dailyData.confirmed.total,
+            deaths: dailyData.deaths.total,
+            date: dailyData.reportDate
+        }));
+        return modifiedData;
+    }
+    catch (error) {
+
+    }
+}
