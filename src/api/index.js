@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const url = "https://api.rootnet.in/covid19-in/stats/";
-const global_url = "https://covid19.mathdro.id/api"
+const global_url = "https://covid19.mathdro.id/api";
+const timeseries_url = "https://pomber.github.io/covid19/timeseries.json";
 
 
 export const fetchData = async () => {
@@ -18,6 +19,8 @@ export const fetchData = async () => {
     }
 }
 
+
+
 export const fetchDailyData = async () => {
 
     try {
@@ -28,6 +31,17 @@ export const fetchDailyData = async () => {
             date: dailyData.reportDate
         }));
         return modifiedData;
+    }
+    catch (error) {
+
+    }
+}
+
+export const fetchTimeData = async () => {
+
+    try {
+        const { data } = await axios.get(`${timeseries_url}`);
+        return data;
     }
     catch (error) {
 
