@@ -18,7 +18,7 @@ const Cards = ({ data: { confirmed, discharged, deaths } }) => {
                         <Typography variant="h5">
                             <CountUp start={0} end={confirmed} duration={2.5} separator=',' />
                         </Typography>
-                        <Typography varian='body2'>Number of active cases of COVID-19</Typography>
+                        <Typography varian='body2'>Active patients of n-COV in India</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.discharged)}>
@@ -27,7 +27,7 @@ const Cards = ({ data: { confirmed, discharged, deaths } }) => {
                         <Typography variant="h5">
                             <CountUp start={0} end={discharged} duration={2.5} separator=',' />
                         </Typography>
-                        <Typography varian='body2'>Number of discharged patients of COVID-19</Typography>
+                        <Typography varian='body2'>Discharged patients of n-COV in India</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.deaths)}>
@@ -36,7 +36,7 @@ const Cards = ({ data: { confirmed, discharged, deaths } }) => {
                         <Typography variant="h5">
                             <CountUp start={0} end={deaths} duration={2.5} separator=',' />
                         </Typography>
-                        <Typography varian='body2'>Number of deaths caused by COVID-19</Typography>
+                        <Typography varian='body2'>Deaths caused by n-COV in India</Typography>
                     </CardContent>
                 </Grid>
             </Grid>

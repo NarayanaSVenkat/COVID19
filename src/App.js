@@ -4,8 +4,8 @@ import { Cards, Chart, StatePicker, TimeChart, DeathChart, RecovChart } from './
 import styles from './App.module.css';
 import { fetchData } from './api';
 
-import image from './images/title.svg'
-import flag from './images/india.svg'
+import image from './images/title2.png'
+//import flag from './images/india.svg'
 
 class App extends React.Component {
 
@@ -24,12 +24,13 @@ class App extends React.Component {
         return (
             <div className={styles.container}>
                 <img className={styles.image} src={image} alt="COVID-19" />
-                <p className={styles.title}> COVID-19 cases in <img className={styles.flag} src={flag}></img></p>
+                {/* <p className={styles.title}> COVID-19 cases in <img className={styles.flag} src={flag}></img></p> */}
                 <Cards data={data} />
                 <Chart data={data} />
                 <TimeChart data={data} />
                 <RecovChart data={data} />
                 <DeathChart data={data} />
+                <p className={styles.title}>This website is possible because of data provided by <a href={"https://github.com/pomber/covid19"}>Rodrigo Pombo.</a></p>
             </div>
         )
     }
