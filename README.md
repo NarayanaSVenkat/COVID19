@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0d090b3e-a9bc-4a25-9789-f1bfefd84c09/deploy-status)](https://app.netlify.com/sites/n-covid19/deploys)  
 ## COVID-19
 2019-2020 Novel Coronavirus Outbreak live dashboard.
 
